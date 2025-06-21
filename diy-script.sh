@@ -18,6 +18,7 @@ rm -rf feeds/luci/themes/luci-theme-netgear
 rm -rf feeds/luci/applications/luci-app-mosdns
 rm -rf feeds/luci/applications/luci-app-netdata
 rm -rf feeds/luci/applications/luci-app-serverchan
+rm -rf feeds/luci/applications/luci-app-frpc
 
 # Git稀疏克隆，只克隆指定目录到本地
 function git_sparse_clone() {
@@ -32,9 +33,12 @@ function git_sparse_clone() {
 # 添加额外插件
 git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 git clone --depth=1 https://github.com/sirpdboy/luci-app-netwizard package/luci-app-netwizard
-
-# 科学上网插件
-git clone --depth=1 https://github.com/kenzok8/small-package package/small-package
+git clone --depth=1 https://github.com/Samuel-Chia/luci-app-socat package/luci-app-socat
+git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
+git clone --depth=1 https://github.com/sirpdboy/luci-app-lucky package/luci-app-lucky
+git clone --depth=1 https://github.com/sirpdboy/luci-app-netwizard package/luci-app-netwizard 
+git clone --depth=1 https://github.com/fw876/helloworld.git package/luci-app-ssr-plus
+git clone --depth=1 https://github.com/superzjg/luci-app-frpc_frps package/luci-app-frpc
 
 
 
